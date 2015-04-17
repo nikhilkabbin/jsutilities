@@ -33,6 +33,7 @@ function randomRGBComponent() {
     return Math.round(Math.random() * 255);
 }
 
-function randomRGBColor() {
-    return 'rgb(' + randomRGBComponent() + ', ' + randomRGBComponent() + ', ' + randomRGBComponent() + ')';
+function randomRGBColor(opacity) {
+    a = typeof opacity !== 'undefined' ? opacity : '1.0';
+    return 'rgb(' + randomRGBComponent() + ', ' + randomRGBComponent() + ', ' + randomRGBComponent() + ', ' +opacity +')';
 }
